@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0, 3);
+}
+header:hover{
+    background: rgba(255, 255, 255, 1);
+}
+
+.logo{
+    flex: 1;
+    margin-top: 10px;
+}
+.menu{
+    flex: 3;
+    display: flex;
+}
+.menu > li{
+    padding: 0 12px;
+    position: relative;
+}
+.menu > li:hover .sub_menu{
+    visibility: visible ;
+    top: 45px;
+}
+.sub_menu{
+    position :absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.2s;  
+    z-index: 1;
+    background: #fff;
+} 
+.small_list > li a{
+    font-weight: normal!important; 
+}
+.sub_menu ul {
+    padding-left: 17px;
+}
+.menu > li a {
+    font-size: 12px;
+    font-weight: bold ;
+    display: block;
+    line-height: 20px;
+}
+.other{
+    flex: 1;
+    display: flex;
+}
+.other > li{
+    padding: 0 12px;
+    position: relative;
+}
+.other > li ::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90%;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    transform: translate(-50%);
+}
+.other > li:first-child {
+    position: relative;
+}
+.other > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid#333    ;
+    background: transparent;
+    outline: none;
+}
+.other > li:first-child i {
+    position:absolute;
+    right: 10px;
+}
+
+#slider{
+    padding-bottom: 30px;
+    border-bottom: 3px solid #333 ;
+    overflow: hidden;
+}
+.slide_controller {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.5s;
+  }
+  
+.slide_controller img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+.dot_container{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dot{
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 6px;
+    cursor: pointer;
+}
+.dot.active{
+    background-color: #333;
+}
+/*----------------------------------------app-------------------------------------------------*/
+.app-container{
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+.app-downl{
+    margin: 50px;
+}
+.app-downl img{
+    height: 50px;
+}
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+}
+.email{
+    position: relative;
+    margin: auto;
+    width: 300px;
+}
+.email input{
+    margin-top: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+.email i {
+    position: absolute;
+    right: 10px;
+    margin-top: 30px;
+}
